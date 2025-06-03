@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    APP NAME-->
+    <TextView
+        android:id="@+id/app_name_id"
+        android:layout_width="wrap_content"
+
+
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="cursive"
+
+        android:text="@string/app_name_message"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+<!--    app logo-->
+    <ImageView
+        android:id="@+id/logo_image_id"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/app_name_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icons8_camera" />
+
+
+
+<!--        upload photo-->
+
+
+    <Button
+        android:id="@+id/upload_photos_button_id"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="clickUploadPhotos"
+        android:text="@string/upload_photos_message"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_name_id" />
+
+    <!--        android:onClick="clickViewResults"-->
+
+    <!--        view results-->
+    <Button
+        android:id="@+id/view_results_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:onClick="clickDisplayPhotos"
+
+        android:text="@string/view_results_message"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload_photos_button_id" />
+
+    <!--        log out-->
+    <Button
+        android:id="@+id/logout_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginRight="20dp"
+        android:onClick="clickLogout"
+        android:text="@string/logout_message"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload_photos_button_id" />
+
+    <!--    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
